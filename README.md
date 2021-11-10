@@ -14,5 +14,5 @@ npm run preview
 
 ## screenshot
 
-![screenshot](./screen.png)
+![screenshot](./sc1.png)
 
