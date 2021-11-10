@@ -1,0 +1,121 @@
+{
+	"extends":"@tsconfig/svelte/tsconfig.json",
+	"include": [
+	  "src/lib/**/*.ts",
+	  "./jest.config.cjs",
+	  "./svelte.config.js"
+	],
+	"exclude": [
+	  "test",
+	  "node_modules/",
+	  "es6",
+	  "commonjs",
+	  "coverage",
+	  ".vscode",
+	  ".jest-cache"
+	],
+	"typeAcquisition": {
+	  "enable": true
+	},
+	"outDir":"./not-used",
+	"compilerOptions": {
+	
+	  "allowJs": false,
+	  "checkJs": false,
+	  "composite": false,
+	  "declaration": true,
+	  "declarationMap": true,
+	  "downlevelIteration": false,
+	  "importHelpers": false,
+	  "incremental": true,
+	  "lib": [
+		"ESNext",
+		"DOM",
+		"WebWorker",
+		"ESNext.Promise",
+		"ES2021",
+		"es2020"
+
+	  ],
+	  "module": "es2020", // cannot select 2021; yet
+	  "noEmit": false,
+	  "plugins": [
+		{
+		  "name": "typescript-eslint-language-service"
+		},
+		{
+		  "transform": "typescript-transform-paths",
+		  "outputMode": "esm"
+		},
+		{
+		  "transform": "typescript-transform-paths",
+		  "afterDeclarations": true
+		}
+	  ],
+	  "removeComments": false,
+	  "rootDir": ".",
+	  "sourceMap": true,
+	  "target": "es2019",
+	  "strict": true,
+	  "alwaysStrict": true,
+	  "noImplicitAny": true,
+	  "noImplicitThis": true,
+	  "strictBindCallApply": true,
+	  "strictFunctionTypes": true,
+	  "strictNullChecks": true,
+	  "strictPropertyInitialization": true,
+	  "allowSyntheticDefaultImports": true,
+	  "allowUmdGlobalAccess": false,
+	  "baseUrl": "./src",
+	  "esModuleInterop": true,
+	  "moduleResolution": "node",
+	  "paths": {
+		"$lib/*": [
+		  "lib/*"
+		],
+	  },
+	  "preserveSymlinks": true,
+	  "typeRoots": [
+		"node_modules/@types"
+	  ],
+	  "inlineSourceMap": false,
+	  "inlineSources": false,
+	  "noImplicitReturns": false,
+	  "noUnusedLocals": true,
+	  "noUnusedParameters": false,
+	  "emitDecoratorMetadata": false,
+	  "experimentalDecorators": true,
+	  "allowUnreachableCode": false,
+	  "allowUnusedLabels": false,
+	  "assumeChangesOnlyAffectDirectDependencies": false,
+	  "noFallthroughCasesInSwitch": false,
+	  "disableSizeLimit": true,
+	  "disableSolutionSearching": false,
+	  "disableSourceOfProjectReferenceRedirect": false,
+	  "emitBOM": false,
+	  "emitDeclarationOnly": false,
+	  "extendedDiagnostics": true,
+	  "forceConsistentCasingInFileNames": true,
+	  "importsNotUsedAsValues": "error",
+	  "listEmittedFiles": true,
+	  "listFiles": true,
+	  "maxNodeModuleJsDepth": 0,
+	  "newLine": "LF",
+	  "noEmitHelpers": false,
+	  "noErrorTruncation": false,
+	  "noImplicitUseStrict": false,
+	  "noLib": false,
+	  "noResolve": false,
+	  "isolatedModules": true,
+	  "noStrictGenericChecks": false,
+	  "preserveConstEnums": true,
+	  "resolveJsonModule": true,
+	  "skipDefaultLibCheck": false,
+	  "skipLibCheck": true,
+	  "stripInternal": true,
+	  "suppressExcessPropertyErrors": false,
+	  "suppressImplicitAnyIndexErrors": false,
+	  "traceResolution": false,
+	  "useDefineForClassFields": true
+	}
+  }

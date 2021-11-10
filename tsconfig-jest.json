@@ -1,0 +1,24 @@
+{
+    "extends": "./tsconfig.json",
+    "outDir" :"jest-compile-test",
+    "compilerOptions": {
+        "noEmit": false,
+        "outDir": "jest-test-transpilation",
+        "noImplicitAny": true,
+        "esModuleInterop": true
+    },
+    "include": [
+        "lib/components/Arrow.svelte",
+        "jest.config.cjs"
+    ],
+    "exclude":[
+        "**/__test__",
+        "node_modules",
+        ".vscode",
+        ".jest-cache",
+        ".metals",
+        ".svelte-kit",
+        "coverage",
+        "build"
+    ],
+}
