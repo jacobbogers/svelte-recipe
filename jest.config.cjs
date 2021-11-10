@@ -25,17 +25,7 @@ module.exports = {
     verbose: true,
     cacheDirectory: '.jest-cache',
     testPathIgnorePatterns: ['/es6/', '/commonjs/','/build/', '/coverage/, /.svelte-kit/'],
-    //testMatch: ['**/__tests__/**/*.[t]s?(x)', '**/?(*.)+(spec|test).[t]s?(x)'],
     testRegex,
-    /*globals: {
-        'ts-jest': {
-            compiler: 'typescript',
-            tsconfig: 'tsconfig-jest.json',
-            diagnostics: {
-                ignoreCodes: [151001],
-            },
-        },
-    },*/
     moduleNameMapper: {
         '^\\$lib/(.*)$': '<rootDir>/src/lib/$1',
     },
@@ -53,7 +43,6 @@ module.exports = {
     moduleFileExtensions: ['js', 'ts', 'svelte'],
     //setupFiles: [""],
    setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
-   //collectCoverageFrom: ['src/**/*.{ts,tsx,svelte,js,jsx}']
 };
 
 

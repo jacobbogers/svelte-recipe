@@ -6,10 +6,7 @@
 	  "./svelte.config.js"
 	],
 	"exclude": [
-	  "test",
 	  "node_modules/",
-	  "es6",
-	  "commonjs",
 	  "coverage",
 	  ".vscode",
 	  ".jest-cache"
@@ -76,7 +73,8 @@
 	  },
 	  "preserveSymlinks": true,
 	  "typeRoots": [
-		"node_modules/@types"
+		"node_modules/@types",
+		"node_modules/@svelte/kit/types/index.d.ts"
 	  ],
 	  "inlineSourceMap": false,
 	  "inlineSources": false,
@@ -93,7 +91,7 @@
 	  "disableSolutionSearching": false,
 	  "disableSourceOfProjectReferenceRedirect": false,
 	  "emitBOM": false,
-	  "emitDeclarationOnly": false,
+	  "emitDeclarationOnly": true,
 	  "extendedDiagnostics": true,
 	  "forceConsistentCasingInFileNames": true,
 	  "importsNotUsedAsValues": "error",
