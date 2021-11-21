@@ -24,6 +24,10 @@ env:
   node: true
   worker: true
   jest: true
+overrides:
+  - files:
+      - *.svelte
+    processor: svelte3/svelte3
 rules:
   quotes:
     - error

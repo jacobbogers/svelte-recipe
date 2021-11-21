@@ -10,8 +10,10 @@
     "include": [
         "./src/**/*.ts",
         "./svelte.config.js",
+        "./jest-setup.ts",
         "./jest.config.cjs",
-        "./svelte.config/test.cjs"
+        "./svelte.config.js",
+        "./svelte.config.test.cjs"
     ],
     "exclude":[
         "node_modules",
